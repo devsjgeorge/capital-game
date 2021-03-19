@@ -64,13 +64,16 @@ States=list(capital_dic.keys())
 while True:
     state=random.choice(States) # randomly select 10 states, how do I avoid duplicate?
     capital = capital_dic[state]
+    capital1 = capital.lower()
     answer = input("What is the capital of " +state + "?")
-    if answer == capital:
+    answer1 = answer.lower()
+    if answer1 == capital1:
         print ("You are right! Congratulations")
     else: 
         print ("Better luck next time") 
     gameContinue = input("If you want continue press Y")
-    if gameContinue == "Y":
+    gameContinue1 = gameContinue.lower()
+    if gameContinue1 == "y":
         continue
     else:
         print ("See you soon!")
